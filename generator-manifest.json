@@ -1,0 +1,18 @@
+{
+  "branch": "main",
+  "depends_recipe": "",
+  "description_control": "Zugriff auf Netzkino",
+  "description_recipe": "Zugriff auf Netzkino",
+  "history_source_dir": "netzkino",
+  "internal_package_name": "enigma2-plugin-extensions-netzkino",
+  "module_dir_name": "Netzkino",
+  "output_subdir": "netzkino",
+  "package_name": "enigma2-plugin-extensions-netzkino",
+  "plugin_src_rel": "netzkino",
+  "python_package": "Netzkino",
+  "rdepends_recipe": "",
+  "replaces": "",
+  "repo_name": "netzkino",
+  "rrecommends": "",
+  "rreplaces": ""
+}
