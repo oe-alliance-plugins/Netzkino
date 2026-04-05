@@ -13,7 +13,6 @@ from twisted.internet.reactor import callInThread
 from os.path import exists, join as pathjoin
 from json import loads
 from socket import setdefaulttimeout
-from six import ensure_str
 from requests import get
 import os
 PLUGINPATH = '/usr/lib/enigma2/python/Plugins/Extensions/Netzkino/'
@@ -25,6 +24,12 @@ else:
     skin = PLUGINPATH + 'skin_HD.xml'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8', 'Accept-Language': 'de,en-US;q=0.7,en;q=0.3', 'Accept-Encoding': 'gzip, deflate'}
 API = 'https://api.netzkino.de.simplecache.net/capi-2.0a/'
+
+
+def ensure_str(s):
+	if isinstance(s, bytes):
+		return s.decode("utf-8")
+	return s
 
 
 def geturl(url):
