@@ -1,11 +1,11 @@
 # -*- coding: UTF-8 -*-
 from Plugins.Plugin import PluginDescriptor
-from six.moves import reload_module
+from importlib import reload
 from . import netzkino
 
 
 def main(session, **kwargs):
-    reload_module(netzkino)
+    reload(netzkino)
     session.open(netzkino.netzkino)
 
 
